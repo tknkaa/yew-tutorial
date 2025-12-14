@@ -11,6 +11,7 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         gemini = pkgs.writeShellScriptBin "gemini" ''
+          export BUN_INSTALL_CACHE_DIR="$PWD/.bun-cache"
           bunx @google/gemini-cli "$@"
         '';
       in
