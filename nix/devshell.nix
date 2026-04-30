@@ -2,10 +2,8 @@
 pkgs.mkShell {
   # Add build dependencies
   packages = with pkgs; [
-    (rust-bin.stable.latest.default.override {
-      targets = [ "wasm32-unknown-unknown" ];
-    })
-    trunk
+    elixir
+    erlang
   ];
 
   # Add environment variables
